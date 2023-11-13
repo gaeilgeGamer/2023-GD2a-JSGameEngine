@@ -52,7 +52,7 @@ function collisionDetection(){
     if(ballY - ballRadius <0 || ballY + ballRadius >height){
         ballSpeedY = -ballSpeedY;
     }
-    if(ballX>0){
+    if(ballX<0){
         player2Score++;
         reset();
     } else if (ballX >width){
