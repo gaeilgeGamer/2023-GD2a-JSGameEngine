@@ -5,7 +5,7 @@ const gameArea = document.getElementById("game-container");
 const playerWidth = player.offsetWidth; 
 const playerHeight = player.offsetHeight;
 const gameWidth = gameArea.offsetWidth;
-const gameHeight = gameArea.offsetWidth;
+const gameHeight = gameArea.offsetHeight;
 
 let playerX = 0;
 let playerY = 75;
@@ -43,7 +43,7 @@ function handlePlayerMovement(){
     if(keys.ArrowRight && playerX<gameWidth-playerWidth){
         playerX += 3;
     }
-    if(keys.ArrowUp && playerX>0){
+    if(keys.ArrowUp && playerY>0){
         playerY -= 3;
     }
     if(keys.ArrowDown && playerY<gameHeight-playerHeight){
