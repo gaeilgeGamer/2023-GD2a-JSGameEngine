@@ -137,7 +137,7 @@ bullets.forEach((bullet,bulletIndex)=>{
             bullet.y < alien.y + alien.height && 
             bullet.y + bullet.height> alien.y
         ){
-            bullet.splice(bulletIndex, 1);
+            bullets.splice(bulletIndex, 1);
             aliens.splice(alienIndex, 1);
         }
     })
