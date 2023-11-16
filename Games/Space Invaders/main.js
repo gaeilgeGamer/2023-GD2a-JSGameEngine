@@ -180,6 +180,15 @@ function gameLoop(){
 requestAnimationFrame(gameLoop);
 }
 
+function isGameOver(){
+    return aliens.some((alien) => alien.y + alien.height
+    >=canvas.height - player.height);
+}
+function resetGame(){
+    aliens.length = 0;
+
+    aliens.push(createAliens());
+}
 
 function handleKeyDown(e){
     if(e.code in keyStates){
