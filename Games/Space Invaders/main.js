@@ -150,7 +150,7 @@ bullets.forEach((bullet,bulletIndex)=>{
     const leftMostAlien = aliens.reduce((leftMost, current) => 
     (current.x<leftMost.x ? current: leftMost), aliens[0]);
     const rightMostAlien = aliens.reduce((rightMost, current) => 
-    (current.x<rightMost.x ? current: rightMost), aliens[0]);
+    (current.x>rightMost.x ? current: rightMost), aliens[0]);
 
     if(!moveDownThisFrame && (rightMostAlien.x + alienWidth > 
         canvas.width || leftMostAlien.x <0)){
