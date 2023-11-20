@@ -8,7 +8,7 @@ class Game{
         this.deltaTime = 0; 
         this.resizeCanvas();
         window.addEventListener("resize", () => this.resizeCanvas());
-        //this.camera = new Camera(null, this.canvas.width, this.canvas.height);
+        this.camera = new Camera(null, this.canvas.width, this.canvas.height);
     }
     resizeCanvas(){
         this.canvas.width = window.innerWidth - 50; 
