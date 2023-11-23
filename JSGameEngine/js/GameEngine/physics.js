@@ -36,8 +36,3 @@ class Physics extends Component {
     }
 }
     export default Physics; 
-
-
-
-
-}
