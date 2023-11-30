@@ -59,12 +59,12 @@ class Player extends GameObject{
                 this.game.removeGameObject(collectible);
             }
         }
-        //const enemies = this.game.gameObjects.filter((obj)=> obj instanceof Enemy);
-        //for(const enemy of enemies){
-            //if(physics.isColliding(enemy.getComponent(Physics))){
-                //this.collidedWithEnemy();
-            //}
-        //}
+        const enemies = this.game.gameObjects.filter((obj)=> obj instanceof Enemy);
+        for(const enemy of enemies){
+            if(physics.isColliding(enemy.getComponent(Physics))){
+                this.collidedWithEnemy();
+            }
+        }
 
         this.isOnPlatform = false; 
         const platforms = this.game.gameObjects.filter((obj)=> obj instanceof Platform);
